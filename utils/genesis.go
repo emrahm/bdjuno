@@ -2,11 +2,11 @@ package utils
 
 import (
 	"fmt"
+	"io/ioutil"
 
 	"github.com/emrahm/juno/v5/node"
 	"github.com/emrahm/juno/v5/types/config"
 	tmjson "github.com/tendermint/tendermint/libs/json"
-	tmos "github.com/tendermint/tendermint/libs/os"
 	tmtypes "github.com/tendermint/tendermint/types"
 )
 
@@ -20,7 +20,7 @@ func ReadGenesis(config config.Config, node node.Node) (*tmtypes.GenesisDoc, err
 }
 
 func readGenesisFromFilePath(path string) (*tmtypes.GenesisDoc, error) {
-	bz, err := tmos.ReadFile(path)
+	bz, err := ioutil.ReadFile(path)
 	if err != nil {
 		return nil, fmt.Errorf("failed to read genesis file: %s", err)
 	}

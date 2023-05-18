@@ -5,7 +5,7 @@ import (
 
 	sdk "github.com/cosmos/cosmos-sdk/types"
 
-	govtypes "github.com/cosmos/cosmos-sdk/x/gov/types"
+	"github.com/cosmos/cosmos-sdk/x/gov/types/v1beta1"
 )
 
 const (
@@ -19,7 +19,7 @@ type DepositParams struct {
 }
 
 // NewDepositParam allows to build a new DepositParams
-func NewDepositParam(d govtypes.DepositParams) DepositParams {
+func NewDepositParam(d v1beta1.DepositParams) DepositParams {
 	return DepositParams{
 		MinDeposit:       d.MinDeposit,
 		MaxDepositPeriod: d.MaxDepositPeriod.Nanoseconds(),
@@ -32,7 +32,7 @@ type VotingParams struct {
 }
 
 // NewVotingParams allows to build a new VotingParams instance
-func NewVotingParams(v govtypes.VotingParams) VotingParams {
+func NewVotingParams(v v1beta1.VotingParams) VotingParams {
 	return VotingParams{
 		VotingPeriod: v.VotingPeriod.Nanoseconds(),
 	}
@@ -54,7 +54,7 @@ type TallyParams struct {
 }
 
 // NewTallyParams allows to build a new TallyParams instance
-func NewTallyParams(t govtypes.TallyParams) TallyParams {
+func NewTallyParams(t v1beta1.TallyParams) TallyParams {
 	return TallyParams{
 		Quorum:        t.Quorum,
 		Threshold:     t.Threshold,
@@ -79,7 +79,7 @@ type Proposal struct {
 	ProposalRoute   string
 	ProposalType    string
 	ProposalID      uint64
-	Content         govtypes.Content
+	Content         v1beta1.Content
 	Status          string
 	SubmitTime      time.Time
 	DepositEndTime  time.Time
@@ -93,7 +93,7 @@ func NewProposal(
 	proposalID uint64,
 	proposalRoute string,
 	proposalType string,
-	content govtypes.Content,
+	content v1beta1.Content,
 	status string,
 	submitTime time.Time,
 	depositEndTime time.Time,
@@ -183,7 +183,7 @@ func NewDeposit(
 type Vote struct {
 	ProposalID uint64
 	Voter      string
-	Option     govtypes.VoteOption
+	Option     v1beta1.VoteOption
 	Timestamp  time.Time
 	Height     int64
 }
@@ -192,7 +192,7 @@ type Vote struct {
 func NewVote(
 	proposalID uint64,
 	voter string,
-	option govtypes.VoteOption,
+	option v1beta1.VoteOption,
 	timestamp time.Time,
 	height int64,
 ) Vote {

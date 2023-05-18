@@ -19,6 +19,7 @@ import (
 	distrtypes "github.com/cosmos/cosmos-sdk/x/distribution/types"
 
 	govtypes "github.com/cosmos/cosmos-sdk/x/gov/types"
+	"github.com/cosmos/cosmos-sdk/x/gov/types/v1beta1"
 )
 
 func (m *Module) UpdateProposal(height int64, blockTime time.Time, id uint64) error {
@@ -137,7 +138,7 @@ func (m *Module) handleParamChangeProposal(height int64, paramChangeProposal *pr
 }
 
 // updateProposalStatus updates the given proposal status
-func (m *Module) updateProposalStatus(proposal govtypes.Proposal) error {
+func (m *Module) updateProposalStatus(proposal v1beta1.Proposal) error {
 	return m.db.UpdateProposal(
 		types.NewProposalUpdate(
 			proposal.ProposalId,
@@ -149,7 +150,7 @@ func (m *Module) updateProposalStatus(proposal govtypes.Proposal) error {
 }
 
 // updateProposalTallyResult updates the tally result associated with the given proposal
-func (m *Module) updateProposalTallyResult(proposal govtypes.Proposal) error {
+func (m *Module) updateProposalTallyResult(proposal v1beta1.Proposal) error {
 	height, err := m.db.GetLastBlockHeight()
 	if err != nil {
 		return err
@@ -173,7 +174,7 @@ func (m *Module) updateProposalTallyResult(proposal govtypes.Proposal) error {
 }
 
 // updateAccounts updates any account that might be involved in the proposal (eg. fund community recipient)
-func (m *Module) updateAccounts(proposal govtypes.Proposal) error {
+func (m *Module) updateAccounts(proposal v1beta1.Proposal) error {
 	content, ok := proposal.Content.GetCachedValue().(*distrtypes.CommunityPoolSpendProposal)
 	if ok {
 		height, err := m.db.GetLastBlockHeight()
@@ -274,15 +275,15 @@ func findStatus(consAddr string, statuses []types.ValidatorStatus) (types.Valida
 	return types.ValidatorStatus{}, fmt.Errorf("cannot find status for validator with consensus address %s", consAddr)
 }
 
-func (m *Module) handlePassedProposal(proposal govtypes.Proposal, height int64) error {
-	if proposal.Status != govtypes.StatusPassed {
+func (m *Module) handlePassedProposal(proposal v1beta1.Proposal, height int64) error {
+	if proposal.Status != v1beta1.StatusPassed {
 		// If proposal status is not passed, do nothing
 		return nil
 	}
 
 	// Unpack proposal
-	var content govtypes.Content
-	err := m.db.EncodingConfig.Marshaler.UnpackAny(proposal.Content, &content)
+	var content v1beta1.Content
+	err := m.db.EncodingConfig.Codec.UnpackAny(proposal.Content, &content)
 	if err != nil {
 		return fmt.Errorf("error while handling ParamChangeProposal: %s", err)
 	}
