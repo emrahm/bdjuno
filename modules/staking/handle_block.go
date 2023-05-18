@@ -4,10 +4,10 @@ import (
 	"encoding/hex"
 	"fmt"
 
-	"github.com/forbole/bdjuno/v4/types"
+	"github.com/emrahm/bdjuno/v5/types"
 
 	stakingtypes "github.com/cosmos/cosmos-sdk/x/staking/types"
-	juno "github.com/forbole/juno/v4/types"
+	juno "github.com/emrahm/juno/v5/types"
 
 	"github.com/rs/zerolog/log"
 	tmctypes "github.com/tendermint/tendermint/rpc/core/types"

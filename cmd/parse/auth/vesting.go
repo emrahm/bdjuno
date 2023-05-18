@@ -4,13 +4,13 @@ import (
 	"encoding/json"
 	"fmt"
 
-	parsecmdtypes "github.com/forbole/juno/v4/cmd/parse/types"
-	"github.com/forbole/juno/v4/types/config"
+	parsecmdtypes "github.com/emrahm/juno/v5/cmd/parse/types"
+	"github.com/emrahm/juno/v5/types/config"
 	"github.com/spf13/cobra"
 
-	"github.com/forbole/bdjuno/v4/database"
-	authutils "github.com/forbole/bdjuno/v4/modules/auth"
-	"github.com/forbole/bdjuno/v4/utils"
+	"github.com/emrahm/bdjuno/v5/database"
+	authutils "github.com/emrahm/bdjuno/v5/modules/auth"
+	"github.com/emrahm/bdjuno/v5/utils"
 )
 
 // vestingCmd returns a Cobra command that allows to fix the vesting data for the accounts

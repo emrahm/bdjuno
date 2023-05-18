@@ -9,15 +9,15 @@ import (
 	"testing"
 	"time"
 
-	dbconfig "github.com/forbole/juno/v4/database/config"
-	"github.com/forbole/juno/v4/logging"
+	dbconfig "github.com/emrahm/juno/v5/database/config"
+	"github.com/emrahm/juno/v5/logging"
 
-	junodb "github.com/forbole/juno/v4/database"
+	junodb "github.com/emrahm/juno/v5/database"
 
-	"github.com/forbole/bdjuno/v4/database"
-	"github.com/forbole/bdjuno/v4/types"
+	"github.com/emrahm/bdjuno/v5/database"
+	"github.com/emrahm/bdjuno/v5/types"
 
-	juno "github.com/forbole/juno/v4/types"
+	juno "github.com/emrahm/juno/v5/types"
 
 	sdk "github.com/cosmos/cosmos-sdk/types"
 	tmversion "github.com/tendermint/tendermint/proto/tendermint/version"

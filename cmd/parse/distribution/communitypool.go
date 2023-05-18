@@ -3,13 +3,13 @@ package distribution
 import (
 	"fmt"
 
-	parsecmdtypes "github.com/forbole/juno/v4/cmd/parse/types"
-	"github.com/forbole/juno/v4/types/config"
+	parsecmdtypes "github.com/emrahm/juno/v5/cmd/parse/types"
+	"github.com/emrahm/juno/v5/types/config"
 	"github.com/spf13/cobra"
 
-	"github.com/forbole/bdjuno/v4/database"
-	"github.com/forbole/bdjuno/v4/modules/distribution"
-	modulestypes "github.com/forbole/bdjuno/v4/modules/types"
+	"github.com/emrahm/bdjuno/v5/database"
+	"github.com/emrahm/bdjuno/v5/modules/distribution"
+	modulestypes "github.com/emrahm/bdjuno/v5/modules/types"
 )
 
 // communityPoolCmd returns the Cobra command allowing to refresh community pool

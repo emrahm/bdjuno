@@ -5,9 +5,9 @@ import (
 
 	sdk "github.com/cosmos/cosmos-sdk/types"
 	distrtypes "github.com/cosmos/cosmos-sdk/x/distribution/types"
-	"github.com/forbole/juno/v4/node/local"
+	"github.com/emrahm/juno/v5/node/local"
 
-	distrsource "github.com/forbole/bdjuno/v4/modules/distribution/source"
+	distrsource "github.com/emrahm/bdjuno/v5/modules/distribution/source"
 )
 
 var (

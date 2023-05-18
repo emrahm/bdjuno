@@ -6,11 +6,11 @@ import (
 
 	"strconv"
 
-	"github.com/forbole/bdjuno/v4/types"
+	"github.com/emrahm/bdjuno/v5/types"
 
 	sdk "github.com/cosmos/cosmos-sdk/types"
 	govtypes "github.com/cosmos/cosmos-sdk/x/gov/types"
-	juno "github.com/forbole/juno/v4/types"
+	juno "github.com/emrahm/juno/v5/types"
 )
 
 // HandleMsg implements modules.MessageModule

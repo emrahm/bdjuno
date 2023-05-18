@@ -14,7 +14,7 @@ import (
 
 	"google.golang.org/grpc/codes"
 
-	"github.com/forbole/bdjuno/v4/types"
+	"github.com/emrahm/bdjuno/v5/types"
 
 	distrtypes "github.com/cosmos/cosmos-sdk/x/distribution/types"
 

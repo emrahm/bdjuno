@@ -5,9 +5,9 @@ import (
 
 	sdk "github.com/cosmos/cosmos-sdk/types"
 	distrtypes "github.com/cosmos/cosmos-sdk/x/distribution/types"
-	"github.com/forbole/juno/v4/node/remote"
+	"github.com/emrahm/juno/v5/node/remote"
 
-	"github.com/forbole/bdjuno/v4/utils"
+	"github.com/emrahm/bdjuno/v5/utils"
 )
 
 // DelegatorTotalRewards implements distrsource.Source

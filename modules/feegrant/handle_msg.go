@@ -5,9 +5,9 @@ import (
 
 	sdk "github.com/cosmos/cosmos-sdk/types"
 	feegranttypes "github.com/cosmos/cosmos-sdk/x/feegrant"
-	juno "github.com/forbole/juno/v4/types"
+	juno "github.com/emrahm/juno/v5/types"
 
-	"github.com/forbole/bdjuno/v4/types"
+	"github.com/emrahm/bdjuno/v5/types"
 )
 
 // HandleMsg implements modules.MessageModule

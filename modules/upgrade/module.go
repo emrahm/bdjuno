@@ -1,9 +1,9 @@
 package upgrade
 
 import (
-	"github.com/forbole/bdjuno/v4/database"
+	"github.com/emrahm/bdjuno/v5/database"
 
-	"github.com/forbole/juno/v4/modules"
+	"github.com/emrahm/juno/v5/modules"
 )
 
 var (

@@ -4,7 +4,7 @@ import (
 	stakingtypes "github.com/cosmos/cosmos-sdk/x/staking/types"
 	tmctypes "github.com/tendermint/tendermint/rpc/core/types"
 
-	"github.com/forbole/bdjuno/v4/types"
+	"github.com/emrahm/bdjuno/v5/types"
 )
 
 type AuthModule interface {

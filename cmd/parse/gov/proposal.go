@@ -6,23 +6,23 @@ import (
 	"strconv"
 	"time"
 
-	modulestypes "github.com/forbole/bdjuno/v4/modules/types"
+	modulestypes "github.com/emrahm/bdjuno/v5/modules/types"
 	"github.com/rs/zerolog/log"
 
 	govtypes "github.com/cosmos/cosmos-sdk/x/gov/types"
-	parsecmdtypes "github.com/forbole/juno/v4/cmd/parse/types"
-	"github.com/forbole/juno/v4/types/config"
+	parsecmdtypes "github.com/emrahm/juno/v5/cmd/parse/types"
+	"github.com/emrahm/juno/v5/types/config"
 	"github.com/spf13/cobra"
 
-	"github.com/forbole/juno/v4/parser"
+	"github.com/emrahm/juno/v5/parser"
 
-	"github.com/forbole/bdjuno/v4/database"
-	"github.com/forbole/bdjuno/v4/modules/distribution"
-	"github.com/forbole/bdjuno/v4/modules/gov"
-	"github.com/forbole/bdjuno/v4/modules/mint"
-	"github.com/forbole/bdjuno/v4/modules/slashing"
-	"github.com/forbole/bdjuno/v4/modules/staking"
-	"github.com/forbole/bdjuno/v4/utils"
+	"github.com/emrahm/bdjuno/v5/database"
+	"github.com/emrahm/bdjuno/v5/modules/distribution"
+	"github.com/emrahm/bdjuno/v5/modules/gov"
+	"github.com/emrahm/bdjuno/v5/modules/mint"
+	"github.com/emrahm/bdjuno/v5/modules/slashing"
+	"github.com/emrahm/bdjuno/v5/modules/staking"
+	"github.com/emrahm/bdjuno/v5/utils"
 )
 
 // proposalCmd returns the Cobra command allowing to fix all things related to a proposal

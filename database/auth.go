@@ -9,10 +9,10 @@ import (
 	"github.com/gogo/protobuf/proto"
 	"github.com/lib/pq"
 
-	dbtypes "github.com/forbole/bdjuno/v4/database/types"
-	dbutils "github.com/forbole/bdjuno/v4/database/utils"
+	dbtypes "github.com/emrahm/bdjuno/v5/database/types"
+	dbutils "github.com/emrahm/bdjuno/v5/database/utils"
 
-	"github.com/forbole/bdjuno/v4/types"
+	"github.com/emrahm/bdjuno/v5/types"
 )
 
 // SaveAccounts saves the given accounts inside the database

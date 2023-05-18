@@ -2,10 +2,10 @@ package slashing
 
 import (
 	"github.com/cosmos/cosmos-sdk/codec"
-	"github.com/forbole/juno/v4/modules"
+	"github.com/emrahm/juno/v5/modules"
 
-	"github.com/forbole/bdjuno/v4/database"
-	slashingsource "github.com/forbole/bdjuno/v4/modules/slashing/source"
+	"github.com/emrahm/bdjuno/v5/database"
+	slashingsource "github.com/emrahm/bdjuno/v5/modules/slashing/source"
 )
 
 var (
