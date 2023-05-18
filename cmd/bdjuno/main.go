@@ -13,7 +13,7 @@ import (
 
 	"github.com/emrahm/bdjuno/v5/types/config"
 
-	"github.com/cosmos/cosmos-sdk/simapp"
+	"cosmossdk.io/simapp"
 	"github.com/emrahm/bdjuno/v5/database"
 	"github.com/emrahm/bdjuno/v5/modules"
 )

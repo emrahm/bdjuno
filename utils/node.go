@@ -4,7 +4,7 @@ import (
 	"fmt"
 
 	"github.com/emrahm/juno/v5/node"
-	coretypes "github.com/tendermint/tendermint/rpc/core/types"
+	coretypes "github.com/tendermint/tendermint/rpc/coretypes"
 )
 
 // QueryTxs queries all the transactions from the given node corresponding to the given query

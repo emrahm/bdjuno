@@ -1,7 +1,7 @@
 package actions
 
 import (
-	"github.com/cosmos/cosmos-sdk/simapp/params"
+	"cosmossdk.io/simapp/params"
 	"github.com/emrahm/juno/v5/modules"
 	"github.com/emrahm/juno/v5/node"
 	"github.com/emrahm/juno/v5/node/builder"

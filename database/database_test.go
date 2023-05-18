@@ -21,10 +21,10 @@ import (
 
 	sdk "github.com/cosmos/cosmos-sdk/types"
 	tmversion "github.com/tendermint/tendermint/proto/tendermint/version"
-	tmctypes "github.com/tendermint/tendermint/rpc/core/types"
+	tmctypes "github.com/tendermint/tendermint/rpc/coretypes"
 	tmtypes "github.com/tendermint/tendermint/types"
 
-	"github.com/cosmos/cosmos-sdk/simapp"
+	"cosmossdk.io/simapp"
 	"github.com/stretchr/testify/suite"
 
 	_ "github.com/proullon/ramsql/driver"

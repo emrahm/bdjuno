@@ -7,7 +7,7 @@ import (
 
 	"github.com/rs/zerolog/log"
 
-	tmctypes "github.com/tendermint/tendermint/rpc/core/types"
+	tmctypes "github.com/tendermint/tendermint/rpc/coretypes"
 )
 
 // HandleBlock implements modules.Module

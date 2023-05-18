@@ -5,7 +5,7 @@ import (
 
 	"github.com/emrahm/juno/v5/types"
 
-	tmctypes "github.com/tendermint/tendermint/rpc/core/types"
+	tmctypes "github.com/tendermint/tendermint/rpc/coretypes"
 )
 
 // HandleBlock implements modules.Module

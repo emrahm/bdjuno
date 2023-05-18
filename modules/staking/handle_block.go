@@ -10,7 +10,7 @@ import (
 	juno "github.com/emrahm/juno/v5/types"
 
 	"github.com/rs/zerolog/log"
-	tmctypes "github.com/tendermint/tendermint/rpc/core/types"
+	tmctypes "github.com/tendermint/tendermint/rpc/coretypes"
 	tmtypes "github.com/tendermint/tendermint/types"
 )
 
